@@ -26,7 +26,8 @@ module quick_mpi_module
     use, intrinsic :: iso_c_binding
     use mpi
     public :: quick_comm, quick_set_comm, is_master
-#include "../../../amber/AmberTools/src/sander/parallel.h"
+!#include "../../../amber/AmberTools/src/sander/parallel.h"
+#include "parallel.h"
     integer :: quick_comm = MPI_COMM_WORLD  ! default
     logical, save :: is_master = .true.
 

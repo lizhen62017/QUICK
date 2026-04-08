@@ -141,7 +141,8 @@ subroutine new_quick_api_type(self, natoms, atomic_numbers, ierr)
   integer :: i, natm_type
 
 #ifdef MPIV
-#include "../../../amber/AmberTools/src/sander/parallel.h"
+!#include "../../../amber/AmberTools/src/sander/parallel.h"
+#include "parallel.h"
   call quick_set_comm(commsander)
 #endif
 
